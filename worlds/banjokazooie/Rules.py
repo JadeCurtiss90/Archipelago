@@ -15,7 +15,7 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
                 if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .01)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [TTC]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .08)):
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .03)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [CC]":
                 if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .08)):
@@ -24,7 +24,7 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
                 if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .15)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [FP]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .32)):
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .23)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [GV]":
                 if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .32)):

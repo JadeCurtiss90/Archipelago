@@ -25,7 +25,7 @@ glf1_location_table = {
 glf2_location_table = {
     "GLF2 TTC Jiggy Puzzle": LocationData(None, [["Jiggy Amount [TTC]"]]),
     "GLF2 CC Jiggy Puzzle": LocationData(None, [["Shock Spring Jump", "Jiggy Amount [CC]"]]),
-    "GLF2 CCW Jiggy Puzzle": LocationData(None, [["Swim", "CCW Jiggy Podium Switch"]]),
+    "GLF2 CCW Jiggy Puzzle": LocationData(None, [["Swim", "CCW Jiggy Podium Switch", "Jiggy Amount [CCW]"]]),
     "GLF2 Note Door 2": LocationData(None, [["Talon Trot", "Note Door Amount [2]"]]),
     "GLF2 Treasure Trove Cove Cannon Jiggy": LocationData(120002, [["Flap Flip", "TTC Witch Switch"]]),
     "GLF2 Clanker's Cavern Eye Switch Jiggy": LocationData(120003, [["Beak Buster", "CC Witch Switch"]]),
