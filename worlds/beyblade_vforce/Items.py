@@ -1,9 +1,12 @@
-from typing import NamedTuple, Optional
+from typing import NamedTuple, Optional, TYPE_CHECKING
 
 from BaseClasses import Item, ItemClassification as IC
 
 from .Constants.Names import item_names as ItemName
 from .Constants.world_constants import GAME_NAME
+
+if TYPE_CHECKING:
+    from .world import BVFUBJWorld
 
 class  BVFUBJItemData(NamedTuple):
     item_groups: list[str]
@@ -43,3 +46,6 @@ def get_item_names_per_category() -> dict[str, set[str]]:
     return categories
 
 ITEM_NAME_TO_ID: dict[str, int] = get_items_name_to_id()
+
+def create_all_items(world: "BVFUBJWorld"):
+    pass
