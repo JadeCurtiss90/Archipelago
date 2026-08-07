@@ -7,7 +7,6 @@ from .Constants.world_constants import GAME_NAME
 
 class  BVFUBJItemData(NamedTuple):
     item_groups: list[str]
-    code: Optional[int]
     classification: IC
     other_variable: Optional[int] = None
 
@@ -18,22 +17,26 @@ class  BVFUBJItem(Item):
 
     def __init__(self, name: str, classification: IC, code: Optional[int], player: int):
         super( BVFUBJItem, self).__init__(name, classification, code, player)
-        self.data = item_table[name]
+        self.data = all_items_table[name]
+        self.code = ITEM_NAME_TO_ID["item"] if "item" in ITEM_NAME_TO_ID else None
 
-item_table: dict[str,  BVFUBJItemData] = {
+base_item_table: dict[str,  BVFUBJItemData] = {
 
 }
 
+
+all_items_table: dict[str, BVFUBJItemData] = {**base_item_table, }
+
 def get_items_name_to_id() -> dict[str, int]:
     dict_locs: dict[str, int] = {}
-    for name, data in item_table.items():
+    for name, data in all_items_table.items():
         dict_locs.update({name: len(dict_locs) + 1})
     return dict_locs
 
 def get_item_names_per_category() -> dict[str, set[str]]:
     categories: dict[str, set[str]] = {}
 
-    for name, data in item_table.items():
+    for name, data in all_items_table.items():
         for category in data.item_groups:
             categories.setdefault(category, set()).add(name)
 

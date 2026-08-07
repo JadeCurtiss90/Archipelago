@@ -19,6 +19,7 @@ class  BVFUBJLocation(Location):
     def __init__(self, player: int, name: str, address: Optional[int], parent: Optional[Region]):
         super(BVFUBJLocation, self).__init__(player, name, address, parent)
         self.data = location_table[name]
+        self.address = LOCATION_NAME_TO_ID["item"] if "item" in LOCATION_NAME_TO_ID else None
 
 
 location_table: dict[str, BVFUBJLocationData] = {
