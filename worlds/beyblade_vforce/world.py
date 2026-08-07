@@ -24,8 +24,8 @@ from .Constants.world_constants import GAME_NAME
 # It is recommended that you read these in that specific order, then come back to the world class.
 class  BVFUBJWorld(World):
     """
-    APQuest is a minimal 8bit-era inspired adventure game with grid-like movement.
-    Good games don't need more than six checks.
+    Beyblade is a platforming game based on the related TV show Beyblade. The player controls one of 4 beyblades while
+    attempting to reach the en dof each level.
     """
 
     # The docstring should contain a description of the game, to be displayed on the WebHost.
@@ -68,7 +68,7 @@ class  BVFUBJWorld(World):
     # Our world class must also have a create_item function that can create any one of our items by name at any time.
     # We also put this in a different file, the same one that create_items is in.
     def create_item(self, name: str) -> Items. BVFUBJItem:
-        item_data: Items. BVFUBJItemData = Items.all_items_table[name]
+        item_data: Items.BVFUBJItemData = Items.all_items_table[name]
         return Items.BVFUBJItem(name, item_data.classification, item_data.code, self.player)
 
     # For features such as item links and panic-method start inventory, AP may ask your world to create extra filler.
