@@ -34,7 +34,7 @@ class  BVFUBJWorld(World):
     game = GAME_NAME
 
     # The WebWorld is a definition class that governs how this world will be displayed on the website.
-    web = web_world. BVFUBJWebWorld()
+    web = web_world.BVFUBJWebWorld()
 
     # This is how we associate the options defined in our options.py with our world.
     options_dataclass =  BVFUBJOptions.BVFUBJOptions
