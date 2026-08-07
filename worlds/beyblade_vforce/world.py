@@ -5,7 +5,7 @@ from typing import Any
 from worlds.AutoWorld import World
 
 # Imports of your world's files must be relative.
-from . import Items, Locations, Options, Regions, Rules, web_world
+from . import Items, Locations, BVFUBJOptions, Regions, Rules, web_world
 from .Constants.world_constants import GAME_NAME
 
 # APQuest will go through all the parts of the world api one step at a time,
@@ -34,11 +34,11 @@ class GameWorld(World):
     game = GAME_NAME
 
     # The WebWorld is a definition class that governs how this world will be displayed on the website.
-    web = web_world.GameWebWorld()
+    web = web_world. BVFUBJWebWorld()
 
     # This is how we associate the options defined in our options.py with our world.
-    options_dataclass = Options.GameOptions
-    options: Options.GameOptions  # Common mistake: This has to be a colon (:), not an equals sign (=).
+    options_dataclass =  BVFUBJOptions.BVFUBJOptions
+    options:  BVFUBJOptions.BVFUBJOptions  # Common mistake: This has to be a colon (:), not an equals sign (=).
 
     # Our world class must have a static location_name_to_id and item_name_to_id defined.
     # We define these in regions.py and items.py respectively, so we just set them here.
@@ -50,7 +50,7 @@ class GameWorld(World):
 
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
-    origin_region_name = "Overworld"
+    origin_region_name = "Menu"
 
     # Our world class must have certain functions ("steps") that get called during generation.
     # The main ones are: create_regions, set_rules, create_items.
@@ -67,9 +67,9 @@ class GameWorld(World):
 
     # Our world class must also have a create_item function that can create any one of our items by name at any time.
     # We also put this in a different file, the same one that create_items is in.
-    def create_item(self, name: str) -> Items.GameItem:
-        item_data: Items.GameItemData = Items.item_table[name]
-        return Items.GameItem(name, item_data.classification, item_data.code, self.player)
+    def create_item(self, name: str) -> Items. BVFUBJItem:
+        item_data: Items. BVFUBJItemData = Items.item_table[name]
+        return Items. BVFUBJItem(name, item_data.classification, item_data.code, self.player)
 
     # For features such as item links and panic-method start inventory, AP may ask your world to create extra filler.
     # The way it does this is by calling get_filler_item_name.

@@ -53,7 +53,7 @@ class Option1(DefaultOnToggle):
     internal_name = "send_hints"
 
 @dataclass
-class GameOptions(DeathLinkMixin, PerGameCommonOptions):
+class  BVFUBJOptions(DeathLinkMixin, PerGameCommonOptions):
     Option1: Option1
     start_inventory_from_pool: StartInventoryPool
 

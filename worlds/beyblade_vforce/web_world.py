@@ -1,19 +1,19 @@
 from BaseClasses import Tutorial
 from worlds.AutoWorld import WebWorld
 
-from .Options import options_groups, game_options_presets
+from .BVFUBJOptions import options_groups, game_options_presets
 from .Constants.world_constants import GAME_NAME
 
 
 # For our game to display correctly on the website, we need to define a WebWorld subclass.
-class GameWebWorld(WebWorld):
+class  BVFUBJWebWorld(WebWorld):
     # We need to override the "game" field of the WebWorld superclass.
     # This must be the same string as the regular World class.
     game = GAME_NAME
 
     # Your game pages will have a visual theme (affecting e.g. the background image).
     # You can choose between dirt, grass, grassFlowers, ice, jungle, ocean, partyTime, and stone.
-    theme = "grassFlowers"
+    theme = "partyTime"
 
     # A WebWorld can have any number of tutorials, but should always have at least an English setup guide.
     # Many WebWorlds just have one setup guide, but some have multiple, e.g. for different languages.

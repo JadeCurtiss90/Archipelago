@@ -5,22 +5,22 @@ from BaseClasses import Item, ItemClassification as IC
 from .Constants.Names import item_names as ItemName
 from .Constants.world_constants import GAME_NAME
 
-class GameItemData(NamedTuple):
+class  BVFUBJItemData(NamedTuple):
     item_groups: list[str]
     code: Optional[int]
     classification: IC
     other_variable: Optional[int] = None
 
 
-class GameItem(Item):
+class  BVFUBJItem(Item):
     game: str = GAME_NAME
-    data: GameItemData
+    data:  BVFUBJItemData
 
     def __init__(self, name: str, classification: IC, code: Optional[int], player: int):
-        super(GameItem, self).__init__(name, classification, code, player)
+        super( BVFUBJItem, self).__init__(name, classification, code, player)
         self.data = item_table[name]
 
-item_table: dict[str, GameItemData] = {
+item_table: dict[str,  BVFUBJItemData] = {
 
 }
 
