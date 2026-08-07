@@ -1,3 +1,4 @@
+STAMINA_REFILL = "Stamina Refill"
 BOOST_UPGRADE = "Boost Upgrade"
 BRAKE_UPGRADE = "Brake Upgrade"
 ULTIMATE_UPGRADE = "Ultimate Upgrade"
