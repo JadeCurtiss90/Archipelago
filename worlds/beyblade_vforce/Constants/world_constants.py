@@ -1,1 +1,1 @@
-GAME_NAME: str = "Game"
+GAME_NAME: str = "Beyblade V-Force: Ultimate Blader Jam"
