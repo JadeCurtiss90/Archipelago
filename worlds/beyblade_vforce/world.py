@@ -48,9 +48,14 @@ class  BVFUBJWorld(World):
     item_name_groups = Items.get_item_names_per_category()
     location_name_groups = Locations.get_location_names_per_category()
 
+    trap_filler_dict: dict[str, int]
+
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
     origin_region_name = "Menu"
+
+    def generate_early(self) -> None:
+        self.trap_filler_dict: dict[str, int] = self.options.trap_weights.value
 
     # Our world class must have certain functions ("steps") that get called during generation.
     # The main ones are: create_regions, set_rules, create_items.
