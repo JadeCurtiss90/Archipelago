@@ -129,7 +129,7 @@ stamina_upgrade_item_table: dict[str,  BVFUBJItemData] = {
 round_unlock_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.E1R1_UNLOCK: BVFUBJItemData(["Round Keys"], IC.progression),
     ItemName.E1R2_UNLOCK: BVFUBJItemData(["Episode 1 Round 2 Unlock"], IC.progression),
-    ItemName.E1R3_UNLOCK: BVFUBJItemData(["Episode 1 Round 3 Unlock"], IC.progression),
+    ItemName.E1R3_UNLOCK: BVFUBJItemData(["Episode 1 3Round 3 Unlock"], IC.progression),
     ItemName.E1R4_UNLOCK: BVFUBJItemData(["Episode 1 Round 4 Unlock"], IC.progression),
     ItemName.E1R5_UNLOCK: BVFUBJItemData(["Episode 1 Round 5 Unlock"], IC.progression),
     ItemName.E1R6_UNLOCK: BVFUBJItemData(["Episode 1 Round 6 Unlock"], IC.progression),
