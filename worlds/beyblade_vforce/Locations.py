@@ -1,6 +1,7 @@
 from typing import Optional, NamedTuple, Any, TYPE_CHECKING
 
 from BaseClasses import Location, Region
+from . import Helpers_Function
 
 from .Constants.Names import location_names as LocationName
 from .Constants.world_constants import GAME_NAME
@@ -16,8 +17,8 @@ class  BVFUBJLocationData(NamedTuple):
     region: str
     location_groups: list[str]  # one or more groups that this location belongs to
     access: list[str]
-    req_options: GameOptionData = None
-    other_variable: int = -1  # entry number on the jmp table it belongs to
+    req_options: BVFUBJOptionData = None
+    ram_data: Helpers_Function.RamData  # entry number on the jmp table it belongs to
 
 
 class  BVFUBJLocation(Location):

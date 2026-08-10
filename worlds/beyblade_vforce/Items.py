@@ -3,6 +3,7 @@ from typing import NamedTuple, Optional, TYPE_CHECKING
 
 from BaseClasses import Item, ItemClassification as IC
 
+from . import Helpers_Function
 from .Constants.Names import item_names as ItemName
 from .Constants.world_constants import GAME_NAME
 from .Locations import BVFUBJOptionData
@@ -16,7 +17,7 @@ class  BVFUBJItemData(NamedTuple):
     count: int = 1
     req_options: BVFUBJOptionData = None
     default_weight: int = 1
-    other_variable: Optional[int] = None
+    ram_data: Helpers_Function.RamData = None
 
 
 class  BVFUBJItem(Item):
