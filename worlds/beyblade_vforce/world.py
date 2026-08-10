@@ -24,8 +24,8 @@ from .Constants.world_constants import GAME_NAME
 # It is recommended that you read these in that specific order, then come back to the world class.
 class  BVFUBJWorld(World):
     """
-    APQuest is a minimal 8bit-era inspired adventure game with grid-like movement.
-    Good games don't need more than six checks.
+    Beyblade is a platforming game based on the related TV show Beyblade. The player controls one of 4 beyblades while
+    attempting to reach the en dof each level.
     """
 
     # The docstring should contain a description of the game, to be displayed on the WebHost.
@@ -48,9 +48,14 @@ class  BVFUBJWorld(World):
     item_name_groups = Items.get_item_names_per_category()
     location_name_groups = Locations.get_location_names_per_category()
 
+    trap_filler_dict: dict[str, int]
+
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
     origin_region_name = "Menu"
+
+    def generate_early(self) -> None:
+        self.trap_filler_dict: dict[str, int] = self.options.trap_weights.value
 
     # Our world class must have certain functions ("steps") that get called during generation.
     # The main ones are: create_regions, set_rules, create_items.
@@ -68,8 +73,8 @@ class  BVFUBJWorld(World):
     # Our world class must also have a create_item function that can create any one of our items by name at any time.
     # We also put this in a different file, the same one that create_items is in.
     def create_item(self, name: str) -> Items. BVFUBJItem:
-        item_data: Items. BVFUBJItemData = Items.item_table[name]
-        return Items. BVFUBJItem(name, item_data.classification, item_data.code, self.player)
+        item_data: Items.BVFUBJItemData = Items.all_items_table[name]
+        return Items.BVFUBJItem(name, item_data.classification, item_data.code, self.player)
 
     # For features such as item links and panic-method start inventory, AP may ask your world to create extra filler.
     # The way it does this is by calling get_filler_item_name.
