@@ -4,11 +4,13 @@ from BaseClasses import Item, ItemClassification as IC
 
 from .Constants.Names import item_names as ItemName
 from .Constants.world_constants import GAME_NAME
+from .Helpers_Function import RamData
+
 
 class  BVFUBJItemData(NamedTuple):
     item_groups: list[str]
     classification: IC
-    other_variable: Optional[int] = None
+    ram_data: RamData = None
 
 
 class  BVFUBJItem(Item):
@@ -21,7 +23,7 @@ class  BVFUBJItem(Item):
         self.code = ITEM_NAME_TO_ID["item"] if "item" in ITEM_NAME_TO_ID else None
 
 base_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.ULTIMATE_DRAGOON: BVFUBJItemData(["Ultimate Dragoon"], IC.filler),
+    ItemName.ULTIMATE_DRAGOON: BVFUBJItemData(["BeyBlade Collectibles"], IC.filler),
     ItemName.ULTIMATE_SAIZO: BVFUBJItemData(["Ultimate Saizo"], IC.filler),
     ItemName.ULTIMATE_FROSTIC_DRANZER: BVFUBJItemData(["Ultimate Frostic Dranzer"], IC.filler),
     ItemName.GEKIRYU_OH: BVFUBJItemData(["Gekiryu-oh"], IC.filler),
@@ -81,12 +83,12 @@ base_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.CYBER_DRANZER: BVFUBJItemData(["Cyber Dranzer"], IC.filler),
     ItemName.CYBER_DRACIEL: BVFUBJItemData(["Cyber Draciel"], IC.filler),
     ItemName.CYBER_DRIGER: BVFUBJItemData(["Cyber Driger"], IC.filler),
-    ItemName.FOX_ICON: BVFUBJItemData(["Fox Icon"], IC.filler),
-    ItemName.SPIDER_ICON: BVFUBJItemData(["Spider Icon"], IC.filler),
-    ItemName.SICKLE_WEASEL_ICON: BVFUBJItemData(["Sickle Weasel Icon"], IC.filler),
-    ItemName.TYRANNO_ICON: BVFUBJItemData(["Tyranno Icon"], IC.filler),
-    ItemName.CLARKEN_ICON: BVFUBJItemData(["Clarken Icon"], IC.filler),
-    ItemName.DRAGOON_ICON: BVFUBJItemData(["Dragoon Icon"], IC.filler),
+    ItemName.FOX_ICON: BVFUBJItemData(["Bit Beast Icon"], IC.filler),
+    ItemName.SPIDER_ICON: BVFUBJItemData(["Bit Beast Icon"], IC.filler),
+    ItemName.SICKLE_WEASEL_ICON: BVFUBJItemData(["Bit Beast Icon"], IC.filler),
+    ItemName.TYRANNO_ICON: BVFUBJItemData(["Bit Beast Icon"], IC.filler),
+    ItemName.CLARKEN_ICON: BVFUBJItemData(["Bit Beast Icon"], IC.filler),
+    ItemName.DRAGOON_ICON: BVFUBJItemData(["Bit Beast Icon"], IC.filler),
     ItemName.DRANZER_ICON: BVFUBJItemData(["Dranzer Icon"], IC.filler),
     ItemName.DRACIEL_ICON: BVFUBJItemData(["Draciel Icon"], IC.filler),
     ItemName.DRIGER_ICON: BVFUBJItemData(["Driger Icon"], IC.filler),
@@ -105,27 +107,27 @@ base_item_table: dict[str,  BVFUBJItemData] = {
 }
 
 filler_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.STAMINA_REFILL: BVFUBJItemData(["Stamina Refill"], IC.filler)
+    ItemName.STAMINA_REFILL: BVFUBJItemData(["Stamina Refills"], IC.filler)
 }
 
 upgrade_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.BOOST_UPGRADE: BVFUBJItemData(["Boost Upgrade"], IC.progression),
-    ItemName.BRAKE_UPGRADE: BVFUBJItemData(["Brake Upgrade"], IC.progression),
-    ItemName.ULTIMATE_UPGRADE: BVFUBJItemData(["Ultimate Upgrade"], IC.useful)
+    ItemName.BOOST_UPGRADE: BVFUBJItemData(["Upgrade"], IC.progression),
+    ItemName.BRAKE_UPGRADE: BVFUBJItemData(["Upgrade"], IC.progression),
+    ItemName.ULTIMATE_UPGRADE: BVFUBJItemData(["Upgrade"], IC.useful)
 }
 
 pad_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.JUMP_PAD_UNLOCK: BVFUBJItemData(["Jump Pad"], IC.progression),
-    ItemName.BOOST_PAD_UNLOCK: BVFUBJItemData(["Boost Pad"], IC.progression),
-    ItemName.RECHARGE_PAD_UNLOCK: BVFUBJItemData(["Recharge Pad"], IC.progression)
+    ItemName.JUMP_PAD_UNLOCK: BVFUBJItemData(["Pad Items"], IC.progression),
+    ItemName.BOOST_PAD_UNLOCK: BVFUBJItemData(["Pad Items"], IC.progression),
+    ItemName.RECHARGE_PAD_UNLOCK: BVFUBJItemData(["Pad Items"], IC.progression)
 }
 
 stamina_upgrade_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.PROGRESSIVE_STAMINA_UPGRADE: BVFUBJItemData(["Progressive Stamina Upgrade"], IC.progression)
+    ItemName.PROGRESSIVE_STAMINA_UPGRADE: BVFUBJItemData(["Progressive Stamina Upgrades"], IC.progression)
 }
 
 round_unlock_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.E1R1_UNLOCK: BVFUBJItemData(["Episode 1 Round 1 Unlock"], IC.progression),
+    ItemName.E1R1_UNLOCK: BVFUBJItemData(["Round Keys"], IC.progression),
     ItemName.E1R2_UNLOCK: BVFUBJItemData(["Episode 1 Round 2 Unlock"], IC.progression),
     ItemName.E1R3_UNLOCK: BVFUBJItemData(["Episode 1 Round 3 Unlock"], IC.progression),
     ItemName.E1R4_UNLOCK: BVFUBJItemData(["Episode 1 Round 4 Unlock"], IC.progression),
@@ -188,34 +190,34 @@ progressive_round_unlock_item_table: dict[str,  BVFUBJItemData] = {
 }
 
 character_unlock_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.BAT: BVFUBJItemData(["Bat"], IC.filler),
-    ItemName.BUS_DRIVER: BVFUBJItemData(["Bus Driver"], IC.filler),
-    ItemName.CHAMELEON: BVFUBJItemData(["Chameleon"], IC.filler),
-    ItemName.DARYL: BVFUBJItemData(["Daryl"], IC.filler),
-    ItemName.DIZZI: BVFUBJItemData(["Dizzi"], IC.filler),
-    ItemName.DOCTOR_B: BVFUBJItemData(["Doctor B"], IC.filler),
-    ItemName.FUNGA: BVFUBJItemData(["Funga"], IC.filler),
-    ItemName.FIGEL: BVFUBJItemData(["Figel"], IC.filler),
-    ItemName.GOKI: BVFUBJItemData(["Goki"], IC.filler),
-    ItemName.GERRY: BVFUBJItemData(["Gerry"], IC.filler),
-    ItemName.GRANDPA: BVFUBJItemData(["Grandpa"], IC.filler),
-    ItemName.GIDEON: BVFUBJItemData(["Gideon"], IC.filler),
-    ItemName.HILARY: BVFUBJItemData(["Hilary"], IC.filler),
-    ItemName.JIM: BVFUBJItemData(["Jim"], IC.filler),
-    ItemName.JOSEPH: BVFUBJItemData(["Joseph"], IC.filler),
-    ItemName.KANE: BVFUBJItemData(["Kane"], IC.filler),
-    ItemName.KAI: BVFUBJItemData(["Kai"], IC.filler),
-    ItemName.KENNY: BVFUBJItemData(["Kenny"], IC.filler),
-    ItemName.MARIAM: BVFUBJItemData(["Mariam"], IC.filler),
-    ItemName.MAX: BVFUBJItemData(["Max"], IC.filler),
-    ItemName.MEN_IN_BLACK: BVFUBJItemData(["Men in Black"], IC.filler),
-    ItemName.MR_DICKINSON: BVFUBJItemData(["Mr. Dickinson"], IC.filler),
-    ItemName.OZUMA: BVFUBJItemData(["Ozuma/Mister X"], IC.filler),
-    ItemName.RAY: BVFUBJItemData(["Ray"], IC.filler),
-    ItemName.SALIMA: BVFUBJItemData(["Salima"], IC.filler),
-    ItemName.SNAKEY: BVFUBJItemData(["Snakey"], IC.filler),
-    ItemName.THE_ROBOT: BVFUBJItemData(["The Robot"], IC.filler),
-    ItemName.TYSON: BVFUBJItemData(["Tyson"], IC.filler)
+    ItemName.BAT: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.BUS_DRIVER: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.CHAMELEON: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.DARYL: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.DIZZI: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.DOCTOR_B: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.FUNGA: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.FIGEL: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.GOKI: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.GERRY: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.GRANDPA: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.GIDEON: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.HILARY: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.JIM: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.JOSEPH: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.KANE: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.KAI: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.KENNY: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.MARIAM: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.MAX: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.MEN_IN_BLACK: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.MR_DICKINSON: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.OZUMA: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.RAY: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.SALIMA: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.SNAKEY: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.THE_ROBOT: BVFUBJItemData(["Characters"], IC.filler),
+    ItemName.TYSON: BVFUBJItemData(["Characters"], IC.filler)
 }
 
 all_items_table: dict[str, BVFUBJItemData] = {**base_item_table, **filler_item_table, **upgrade_item_table, **pad_item_table, **stamina_upgrade_item_table, **round_unlock_item_table, **progressive_round_unlock_item_table, **character_unlock_item_table}
