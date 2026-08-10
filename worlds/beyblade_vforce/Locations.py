@@ -18,7 +18,7 @@ class  BVFUBJLocationData(NamedTuple):
     location_groups: list[str]  # one or more groups that this location belongs to
     access: list[str]
     req_options: BVFUBJOptionData = None
-    ram_data: Helpers_Function.RamData  # entry number on the jmp table it belongs to
+    ram_data: Helpers_Function.RamData = None # entry number on the jmp table it belongs to
 
 
 class  BVFUBJLocation(Location):
