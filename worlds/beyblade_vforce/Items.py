@@ -1,4 +1,4 @@
-from typing import NamedTuple, Optional
+from typing import Optional
 
 from BaseClasses import Item, ItemClassification as IC
 
@@ -32,7 +32,7 @@ base_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.POLTA: BVFUBJItemData(["Polta"], IC.filler),
     ItemName.PISTOL: BVFUBJItemData(["Pistol"], IC.filler),
     ItemName.MAKENDO: BVFUBJItemData(["Makendo"], IC.filler),
-    ItemName.BAKUSHIN_OH: BVFUBJItemData(["Bakushin-oh"], IC.filler),
+    ItemName.BAKUSHIN_OH: BVFUBJItemData(["banana"], IC.filler),
     ItemName.BUMP_KING: BVFUBJItemData(["Bump King"], IC.filler),
     ItemName.GRIP_ATTACKER: BVFUBJItemData(["Grip Attacker"], IC.filler),
     ItemName.BEARING_STINGER: BVFUBJItemData(["Bearing Stinger"], IC.filler),
