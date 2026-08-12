@@ -38,6 +38,16 @@ class ShuffleMoves(Toggle):
     display_name = "Round Shuffle"
     internal_name = "shuffle_moves"
 
+class ProgressiveStaminaUnlocks(Choice):
+    """Shuffle in the Beyblade's maximum stamina (AKA the length of the ripcord bar). Either the four colored ripcord
+        segments, or the sixteen notches on those segments, can be shuffled"""
+    display_name = "Progressive Stamina Shuffle"
+    internal_name = "shuffle_progressive_stamina"
+    option_off = 0
+    option_progressive_colors = 1
+    option_progressive_notches = 2
+    default = 0
+
 class ShufflePads(Toggle):
     """Shuffle in jump, boost and recharge pads as both locations and items"""
     display_name = "Round Shuffle"
