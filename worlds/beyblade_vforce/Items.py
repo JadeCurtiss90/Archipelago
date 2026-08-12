@@ -183,8 +183,22 @@ round_unlock_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.E7RB_UNLOCK: BVFUBJItemData(["Round Unlocks"], IC.progression),
 }
 
+episode_unlock_item_table: dict[str,  BVFUBJItemData] = {
+    ItemName.E1_UNLOCK: BVFUBJItemData(["Episode Unlocks"], IC.progression),
+    ItemName.E2_UNLOCK: BVFUBJItemData(["Episode Unlocks"], IC.progression),
+    ItemName.E3_UNLOCK: BVFUBJItemData(["Episode Unlocks"], IC.progression),
+    ItemName.E4_UNLOCK: BVFUBJItemData(["Episode Unlocks"], IC.progression),
+    ItemName.E5_UNLOCK: BVFUBJItemData(["Episode Unlocks"], IC.progression),
+    ItemName.E6_UNLOCK: BVFUBJItemData(["Episode Unlocks"], IC.progression),
+    ItemName.E7_UNLOCK: BVFUBJItemData(["Episode Unlocks"], IC.progression)
+}
+
 progressive_round_unlock_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.PROGRESSIVE_ROUND_UNLOCK: BVFUBJItemData(["Progressive Round Unlocks"], IC.progression)
+}
+
+progressive_episode_unlock_item_table: dict[str,  BVFUBJItemData] = {
+    ItemName.PROGRESSIVE_EPISODE_UNLOCK: BVFUBJItemData(["Progressive Episode Unlocks"], IC.progression)
 }
 
 character_unlock_item_table: dict[str,  BVFUBJItemData] = {
@@ -218,7 +232,7 @@ character_unlock_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.TYSON: BVFUBJItemData(["Characters"], IC.filler)
 }
 
-all_items_table: dict[str, BVFUBJItemData] = {**base_item_table, **filler_item_table, **upgrade_item_table, **pad_item_table, **stamina_upgrade_item_table, **round_unlock_item_table, **progressive_round_unlock_item_table, **character_unlock_item_table}
+all_items_table: dict[str, BVFUBJItemData] = {**base_item_table, **filler_item_table, **upgrade_item_table, **pad_item_table, **stamina_upgrade_item_table, **round_unlock_item_table, **episode_unlock_item_table, **progressive_round_unlock_item_table, **progressive_episode_unlock_item_table, **character_unlock_item_table}
 
 def get_items_name_to_id() -> dict[str, int]:
     dict_locs: dict[str, int] = {}
