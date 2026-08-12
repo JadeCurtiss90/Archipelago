@@ -9,15 +9,39 @@ from .Items import trap_filler_items
 #Example Options from Luigi's Mansion
 
 
-class LuigiWalkSpeed(Choice):
-    """Choose how fast Luigi moves. Speeds above normal may cause OoB issues"""
-    display_name = "Walk Speed"
-    internal_name = "walk_speed"
-    option_normal_speed = 0
-    option_kinda_fast = 1
-    option_schmoovin = 2
+class RamdomEpisodes(Toggle):
+    """Episode unlocks are shuffled in as progressive items by default. With this option enabled, episodes will be
+        shuffled in in a random order instead"""
+    display_name = "Random Episodes"
+    internal_name = "random_episodes"
+    option_progressive = 0
+    option_random = 1
     default = 0
 
+class RoundShuffle(Choice):
+    """Shuffle the rounds in each episode. Random round unlocks will still require their corresponding episode to
+        be unlocked before they can be played"""
+    display_name = "Round Shuffle"
+    internal_name = "shuffle_rounds"
+    option_off = 0
+    option_progressive = 1
+    option_random = 2
+    default = 0
+
+class ParChecks(Toggle):
+    """Add par times for each course as locations"""
+    display_name = "Round Shuffle"
+    internal_name = "par_checks"
+
+class ShuffleMoves(Toggle):
+    """Shuffle in the Beyblade's accelerate, brake and ultimate abilities"""
+    display_name = "Round Shuffle"
+    internal_name = "shuffle_moves"
+
+class ShufflePads(Toggle):
+    """Shuffle in jump, boost and recharge pads"""
+    display_name = "Round Shuffle"
+    internal_name = "shuffle_pads"
 
 class FillerWeights(OptionCounter):
     """
