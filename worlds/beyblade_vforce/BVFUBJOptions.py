@@ -39,7 +39,7 @@ class ShuffleMoves(Toggle):
     internal_name = "shuffle_moves"
 
 class ShufflePads(Toggle):
-    """Shuffle in jump, boost and recharge pads"""
+    """Shuffle in jump, boost and recharge pads as both locations and items"""
     display_name = "Round Shuffle"
     internal_name = "shuffle_pads"
 
