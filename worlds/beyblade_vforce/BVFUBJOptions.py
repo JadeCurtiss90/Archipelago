@@ -9,7 +9,7 @@ from .Items import trap_filler_items
 #Example Options from Luigi's Mansion
 
 
-class RamdomEpisodes(Toggle):
+class RandomEpisodes(Toggle):
     """Episode unlocks are shuffled in as progressive items by default. With this option enabled, episodes will be
         shuffled in a random order instead"""
     display_name = "Random Episodes"
@@ -119,7 +119,12 @@ class Option1(DefaultOnToggle):
 class  BVFUBJOptions(DeathLinkMixin, PerGameCommonOptions):
     trap_weights: TrapWeights
     trap_percentage: TrapPercentage
-    Option1: Option1
+    random_episodes: RandomEpisodes
+    round_shuffle: RoundShuffle
+    par_checks: ParChecks
+    shuffle_moves: ShuffleMoves
+    progressive_stamina_unlocks: ProgressiveStaminaUnlocks
+    shuffle_pads: ShufflePads
     start_inventory_from_pool: StartInventoryPool
 
 
