@@ -11,7 +11,7 @@ from .Items import trap_filler_items
 
 class RamdomEpisodes(Toggle):
     """Episode unlocks are shuffled in as progressive items by default. With this option enabled, episodes will be
-        shuffled in in a random order instead"""
+        shuffled in a random order instead"""
     display_name = "Random Episodes"
     internal_name = "random_episodes"
     option_progressive = 0
