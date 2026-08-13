@@ -232,7 +232,10 @@ character_unlock_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.TYSON: BVFUBJItemData(["Characters"], IC.filler)
 }
 
-all_items_table: dict[str, BVFUBJItemData] = {**base_item_table, **filler_item_table, **upgrade_item_table, **pad_item_table, **stamina_upgrade_item_table, **round_unlock_item_table, **episode_unlock_item_table, **progressive_round_unlock_item_table, **progressive_episode_unlock_item_table, **character_unlock_item_table}
+all_items_table: dict[str, BVFUBJItemData] = {**base_item_table, **filler_item_table, **upgrade_item_table,
+                                              **pad_item_table, **stamina_upgrade_item_table, **round_unlock_item_table,
+                                              **episode_unlock_item_table, **progressive_round_unlock_item_table,
+                                              **progressive_episode_unlock_item_table, **character_unlock_item_table}
 
 def get_items_name_to_id() -> dict[str, int]:
     dict_locs: dict[str, int] = {}
