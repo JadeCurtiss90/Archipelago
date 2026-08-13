@@ -1,5 +1,5 @@
 from enum import StrEnum
-from typing import NamedTuple, Optional
+from typing import NamedTuple, Optional, Any
 
 
 class RamEndianness(StrEnum):
@@ -13,3 +13,7 @@ class RamData(NamedTuple):
     ram_byte_size: int
     bit_position: Optional[int] = None
     pointers_list: Optional[list[int]] = None
+
+class GameOptionData(NamedTuple):
+    option_list: dict[str, list[Any]]
+    combine: bool = True
