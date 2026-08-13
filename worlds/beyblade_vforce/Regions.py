@@ -1,6 +1,9 @@
 from typing import NamedTuple, Optional, List, TYPE_CHECKING
 from BaseClasses import Region, MultiWorld
-from .Constants.Names import region_names as RegionName
+from rule_builder.rules import Has
+from .Constants.Names import region_names as RegionName, item_names as itemname
+from . import Rules
+
 if TYPE_CHECKING:
     from .world import BVFUBJWorld
 
@@ -85,8 +88,11 @@ region_list: dict[str, BVFUBJRegionData] = {
 
 def create_and_connect_regions(world: "BVFUBJWorld"):
     world.get_region(RegionName.MENU).connect(world.get_region(RegionName.ADVENTUREMODE))
-    world.get_region(RegionName.ADVENTUREMODE).connect(world.get_region(RegionName.E1))
-    world.get_region(RegionName.E1).connect(world.get_region(RegionName.E1R1))
+    world.get_region(RegionName.ADVENTUREMODE).connect(world.get_region(RegionName.E1),
+                                                       rule=Rules.Episode1Acc)
+    world.get_region(RegionName.E1).connect(world.get_region(RegionName.E1R1),
+                                            rule=(Rules.ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK))
+                                                 | Rules.RandRound & Has(itemname.E1R1_UNLOCK))
     world.get_region(RegionName.E1).connect(world.get_region(RegionName.E1R2))
     world.get_region(RegionName.E1).connect(world.get_region(RegionName.E1R3))
     world.get_region(RegionName.E1).connect(world.get_region(RegionName.E1R4))
@@ -94,7 +100,8 @@ def create_and_connect_regions(world: "BVFUBJWorld"):
     world.get_region(RegionName.E1).connect(world.get_region(RegionName.E1R6))
     world.get_region(RegionName.E1).connect(world.get_region(RegionName.E1R7))
     world.get_region(RegionName.E1).connect(world.get_region(RegionName.E1RB))
-    world.get_region(RegionName.ADVENTUREMODE).connect(world.get_region(RegionName.E2))
+    world.get_region(RegionName.ADVENTUREMODE).connect(world.get_region(RegionName.E2),
+                                                       rule=Rules.Episode2Acc)
     world.get_region(RegionName.E2).connect(world.get_region(RegionName.E2R1))
     world.get_region(RegionName.E2).connect(world.get_region(RegionName.E2R2))
     world.get_region(RegionName.E2).connect(world.get_region(RegionName.E2R3))
