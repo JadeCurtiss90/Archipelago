@@ -40,13 +40,13 @@ Episode1Round6Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOC
                          | RandRound & Has(itemname.E1R6_UNLOCK) | OpenRounds)
 Episode1Round7Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 7)
                           | RandRound & Has(itemname.E1R7_UNLOCK) | OpenRounds)
-Episode1RoundBAcc: Rule[Any] = ((CanReachLocation(E1R1Par_Location, parent_region_name=regname.E1) &
-                               CanReachLocation(E1R2Par_Location, parent_region_name=regname.E1) &
-                               CanReachLocation(E1R3Par_Location, parent_region_name=regname.E1) &
-                               CanReachLocation(E1R4Par_Location, parent_region_name=regname.E1) &
-                               CanReachLocation(E1R5Par_Location, parent_region_name=regname.E1) &
-                               CanReachLocation(E1R6Par_Location, parent_region_name=regname.E1) &
-                               CanReachLocation(E1R7Par_Location, parent_region_name=regname.E1)) &
+Episode1RoundBAcc: Rule[Any] = ((CanReachLocation(locname.E1R1Par_Location, parent_region_name=regname.E1R1) &
+                               CanReachLocation(locname.E1R2Par_Location, parent_region_name=regname.E1R2) &
+                               CanReachLocation(locname.E1R3Par_Location, parent_region_name=regname.E1R3) &
+                               CanReachLocation(locname.E1R4Par_Location, parent_region_name=regname.E1R4) &
+                               CanReachLocation(locname.E1R5Par_Location, parent_region_name=regname.E1R5) &
+                               CanReachLocation(locname.E1R6Par_Location, parent_region_name=regname.E1R6) &
+                               CanReachLocation(locname.E1R7Par_Location, parent_region_name=regname.E1R7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 8)) |
                                (RandRound & Has(itemname.E1RB_UNLOCK) | OpenRounds)))
 Episode2Round1Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 9)
@@ -63,13 +63,13 @@ Episode2Round6Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOC
                         | RandRound & Has(itemname.E2R6_UNLOCK) | OpenRounds)
 Episode2Round7Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 15)
                          | RandRound & Has(itemname.E2R7_UNLOCK) | OpenRounds)
-Episode2RoundBAcc: Rule[Any] = ((CanReachLocation(E2R1Par_Location, parent_region_name=regname.E2) &
-                               CanReachLocation(E2R2Par_Location, parent_region_name=regname.E2) &
-                               CanReachLocation(E2R3Par_Location, parent_region_name=regname.E2) &
-                               CanReachLocation(E2R4Par_Location, parent_region_name=regname.E2) &
-                               CanReachLocation(E2R5Par_Location, parent_region_name=regname.E2) &
-                               CanReachLocation(E2R6Par_Location, parent_region_name=regname.E2) &
-                               CanReachLocation(E2R7Par_Location, parent_region_name=regname.E2)) &
+Episode2RoundBAcc: Rule[Any] = ((CanReachLocation(locname.E2R1Par_Location, parent_region_name=regname.E2R1) &
+                               CanReachLocation(locname.E2R2Par_Location, parent_region_name=regname.E2R2) &
+                               CanReachLocation(locname.E2R3Par_Location, parent_region_name=regname.E2R3) &
+                               CanReachLocation(locname.E2R4Par_Location, parent_region_name=regname.E2R4) &
+                               CanReachLocation(locname.E2R5Par_Location, parent_region_name=regname.E2R5) &
+                               CanReachLocation(locname.E2R6Par_Location, parent_region_name=regname.E2R6) &
+                               CanReachLocation(locname.E2R7Par_Location, parent_region_name=regname.E2R7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 16)) |
                                (RandRound & Has(itemname.E2RB_UNLOCK) | OpenRounds)))
 Episode3Round1Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 17)
@@ -86,13 +86,13 @@ Episode3Round6Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOC
                         | RandRound & Has(itemname.E3R6_UNLOCK) | OpenRounds)
 Episode3Round7Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 23)
                          | RandRound & Has(itemname.E3R7_UNLOCK) | OpenRounds)
-Episode3RoundBAcc: Rule[Any] = ((CanReachLocation(E3R1Par_Location, parent_region_name=regname.E3) &
-                               CanReachLocation(E3R2Par_Location, parent_region_name=regname.E3) &
-                               CanReachLocation(E3R3Par_Location, parent_region_name=regname.E3) &
-                               CanReachLocation(E3R4Par_Location, parent_region_name=regname.E3) &
-                               CanReachLocation(E3R5Par_Location, parent_region_name=regname.E3) &
-                               CanReachLocation(E3R6Par_Location, parent_region_name=regname.E3) &
-                               CanReachLocation(E3R7Par_Location, parent_region_name=regname.E3)) &
+Episode3RoundBAcc: Rule[Any] = ((CanReachLocation(locname.E3R1Par_Location, parent_region_name=regname.E3R1) &
+                               CanReachLocation(locname.E3R2Par_Location, parent_region_name=regname.E3R2) &
+                               CanReachLocation(locname.E3R3Par_Location, parent_region_name=regname.E3R3) &
+                               CanReachLocation(locname.E3R4Par_Location, parent_region_name=regname.E3R4) &
+                               CanReachLocation(locname.E3R5Par_Location, parent_region_name=regname.E3R5) &
+                               CanReachLocation(locname.E3R6Par_Location, parent_region_name=regname.E3R6) &
+                               CanReachLocation(locname.E3R7Par_Location, parent_region_name=regname.E3R7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 24)) |
                                (RandRound & Has(itemname.E3RB_UNLOCK) | OpenRounds)))
 Episode4Round1Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 25)
@@ -109,13 +109,13 @@ Episode4Round6Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOC
                         | RandRound & Has(itemname.E4R6_UNLOCK) | OpenRounds)
 Episode4Round7Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 31)
                          | RandRound & Has(itemname.E4R7_UNLOCK) | OpenRounds)
-Episode4RoundBAcc: Rule[Any] = ((CanReachLocation(E4R1Par_Location, parent_region_name=regname.E4) &
-                               CanReachLocation(E4R2Par_Location, parent_region_name=regname.E4) &
-                               CanReachLocation(E4R3Par_Location, parent_region_name=regname.E4) &
-                               CanReachLocation(E4R4Par_Location, parent_region_name=regname.E4) &
-                               CanReachLocation(E4R5Par_Location, parent_region_name=regname.E4) &
-                               CanReachLocation(E4R6Par_Location, parent_region_name=regname.E4) &
-                               CanReachLocation(E4R7Par_Location, parent_region_name=regname.E4)) &
+Episode4RoundBAcc: Rule[Any] = ((CanReachLocation(locname.E4R1Par_Location, parent_region_name=regname.E4R1) &
+                               CanReachLocation(locname.E4R2Par_Location, parent_region_name=regname.E4R2) &
+                               CanReachLocation(locname.E4R3Par_Location, parent_region_name=regname.E4R3) &
+                               CanReachLocation(locname.E4R4Par_Location, parent_region_name=regname.E4R4) &
+                               CanReachLocation(locname.E4R5Par_Location, parent_region_name=regname.E4R5) &
+                               CanReachLocation(locname.E4R6Par_Location, parent_region_name=regname.E4R6) &
+                               CanReachLocation(locname.E4R7Par_Location, parent_region_name=regname.E4R7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 32)) |
                                (RandRound & Has(itemname.E4RB_UNLOCK) | OpenRounds)))
 Episode5Round1Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 33)
@@ -132,13 +132,13 @@ Episode5Round6Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOC
                         | RandRound & Has(itemname.E5R6_UNLOCK) | OpenRounds)
 Episode5Round7Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 39)
                          | RandRound & Has(itemname.E5R7_UNLOCK) | OpenRounds)
-Episode5RoundBAcc: Rule[Any] = ((CanReachLocation(E5R1Par_Location, parent_region_name=regname.E5) &
-                               CanReachLocation(E5R2Par_Location, parent_region_name=regname.E5) &
-                               CanReachLocation(E5R3Par_Location, parent_region_name=regname.E5) &
-                               CanReachLocation(E5R4Par_Location, parent_region_name=regname.E5) &
-                               CanReachLocation(E5R5Par_Location, parent_region_name=regname.E5) &
-                               CanReachLocation(E5R6Par_Location, parent_region_name=regname.E5) &
-                               CanReachLocation(E5R7Par_Location, parent_region_name=regname.E5)) &
+Episode5RoundBAcc: Rule[Any] = ((CanReachLocation(locname.E5R1Par_Location, parent_region_name=regname.E5R1) &
+                               CanReachLocation(locname.E5R2Par_Location, parent_region_name=regname.E5R2) &
+                               CanReachLocation(locname.E5R3Par_Location, parent_region_name=regname.E5R3) &
+                               CanReachLocation(locname.E5R4Par_Location, parent_region_name=regname.E5R4) &
+                               CanReachLocation(locname.E5R5Par_Location, parent_region_name=regname.E5R5) &
+                               CanReachLocation(locname.E5R6Par_Location, parent_region_name=regname.E5R6) &
+                               CanReachLocation(locname.E5R7Par_Location, parent_region_name=regname.E5R7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 40)) |
                                (RandRound & Has(itemname.E5RB_UNLOCK) | OpenRounds)))
 Episode6Round1Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 41)
@@ -155,13 +155,13 @@ Episode6Round6Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOC
                         | RandRound & Has(itemname.E6R6_UNLOCK) | OpenRounds)
 Episode6Round7Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 47)
                          | RandRound & Has(itemname.E6R7_UNLOCK) | OpenRounds)
-Episode6RoundBAcc: Rule[Any] = ((CanReachLocation(E6R1Par_Location, parent_region_name=regname.E6) &
-                               CanReachLocation(E6R2Par_Location, parent_region_name=regname.E6) &
-                               CanReachLocation(E6R3Par_Location, parent_region_name=regname.E6) &
-                               CanReachLocation(E6R4Par_Location, parent_region_name=regname.E6) &
-                               CanReachLocation(E6R5Par_Location, parent_region_name=regname.E6) &
-                               CanReachLocation(E6R6Par_Location, parent_region_name=regname.E6) &
-                               CanReachLocation(E6R7Par_Location, parent_region_name=regname.E6)) &
+Episode6RoundBAcc: Rule[Any] = ((CanReachLocation(locname.E6R1Par_Location, parent_region_name=regname.E6R1) &
+                               CanReachLocation(locname.E6R2Par_Location, parent_region_name=regname.E6R2) &
+                               CanReachLocation(locname.E6R3Par_Location, parent_region_name=regname.E6R3) &
+                               CanReachLocation(locname.E6R4Par_Location, parent_region_name=regname.E6R4) &
+                               CanReachLocation(locname.E6R5Par_Location, parent_region_name=regname.E6R5) &
+                               CanReachLocation(locname.E6R6Par_Location, parent_region_name=regname.E6R6) &
+                               CanReachLocation(locname.E6R7Par_Location, parent_region_name=regname.E6R7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 48)) |
                                (RandRound & Has(itemname.E6RB_UNLOCK) | OpenRounds)))
 Episode7Round1Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 49)
@@ -178,15 +178,16 @@ Episode7Round6Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOC
                         | RandRound & Has(itemname.E7R6_UNLOCK) | OpenRounds)
 Episode7Round7Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 55)
                          | RandRound & Has(itemname.E7R7_UNLOCK) | OpenRounds)
-Episode7RoundBAcc: Rule[Any] = ((CanReachLocation(E7R1Par_Location, parent_region_name=regname.E7) &
-                               CanReachLocation(E7R2Par_Location, parent_region_name=regname.E7) &
-                               CanReachLocation(E7R3Par_Location, parent_region_name=regname.E7) &
-                               CanReachLocation(E7R4Par_Location, parent_region_name=regname.E7) &
-                               CanReachLocation(E7R5Par_Location, parent_region_name=regname.E7) &
-                               CanReachLocation(E7R6Par_Location, parent_region_name=regname.E7) &
-                               CanReachLocation(E7R7Par_Location, parent_region_name=regname.E7)) &
+Episode7RoundBAcc: Rule[Any] = ((CanReachLocation(locname.E7R1Par_Location, parent_region_name=regname.E7R1) &
+                               CanReachLocation(locname.E7R2Par_Location, parent_region_name=regname.E7R2) &
+                               CanReachLocation(locname.E7R3Par_Location, parent_region_name=regname.E7R3) &
+                               CanReachLocation(locname.E7R4Par_Location, parent_region_name=regname.E7R4) &
+                               CanReachLocation(locname.E7R5Par_Location, parent_region_name=regname.E7R5) &
+                               CanReachLocation(locname.E7R6Par_Location, parent_region_name=regname.E7R6) &
+                               CanReachLocation(locname.E7R7Par_Location, parent_region_name=regname.E7R7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 56)) |
                                (RandRound & Has(itemname.E7RB_UNLOCK) | OpenRounds)))
+
 ShuffleMoves: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 1)
 MoveRandoOff: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 0)
 CanBoost: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShuffleMoves, 1) & Has(itemname.BOOST_UPGRADE)
