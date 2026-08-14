@@ -187,9 +187,16 @@ Episode7RoundBAcc: Rule[Any] = ((CanReachLocation(locname.E7R1Par_Location, pare
                                CanReachLocation(locname.E7R7Par_Location, parent_region_name=regname.E7R7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 56)) |
                                (RandRound & Has(itemname.E7RB_UNLOCK) | OpenRounds)))
-
-ShuffleMoves: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 1)
 MoveRandoOff: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 0)
 CanBoost: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShuffleMoves, 1) & Has(itemname.BOOST_UPGRADE)
 CanBrake: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShuffleMoves, 1) & Has(itemname.BRAKE_UPGRADE)
 CanUltimate: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShuffleMoves, 1) & Has(itemname.ULTIMATE_UPGRADE)
+ProgressiveStaminaOff: Rule[Any] = True_() & OptionFilter(bey_opt.ProgressiveStaminaUnlocks, 0)
+NeedsRedStaminaBar: Rule[Any] = ProgressiveStaminaOff | (OptionFilter(bey_opt.ProgressiveStaminaUnlocks, 1) &
+                                                         Has(itemname.PROGRESSIVE_STAMINA_UPGRADE, 1))
+NeedsOrangeStaminaBar: Rule[Any] = ProgressiveStaminaOff | (OptionFilter(bey_opt.ProgressiveStaminaUnlocks, 1) &
+                                                         Has(itemname.PROGRESSIVE_STAMINA_UPGRADE, 2))
+NeedsYellowStaminaBar: Rule[Any] = ProgressiveStaminaOff | (OptionFilter(bey_opt.ProgressiveStaminaUnlocks, 1) &
+                                                         Has(itemname.PROGRESSIVE_STAMINA_UPGRADE, 3))
+NeedsWhiteStaminaBar: Rule[Any] = ProgressiveStaminaOff | (OptionFilter(bey_opt.ProgressiveStaminaUnlocks, 1) &
+                                                         Has(itemname.PROGRESSIVE_STAMINA_UPGRADE, 4))
