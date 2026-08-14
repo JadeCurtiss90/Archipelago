@@ -187,7 +187,8 @@ Episode7RoundBAcc: Rule[Any] = ((CanReachLocation(E7R1Par_Location, parent_regio
                                CanReachLocation(E7R7Par_Location, parent_region_name=regname.E7)) &
                                ((ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 56)) |
                                (RandRound & Has(itemname.E7RB_UNLOCK) | OpenRounds)))
-ShuffleMoves: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 1) ##todo
-
-oveRandoOff: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 0)
+ShuffleMoves: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 1)
+MoveRandoOff: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 0)
 CanBoost: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShuffleMoves, 1) & Has(itemname.BOOST_UPGRADE)
+CanBrake: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShuffleMoves, 1) & Has(itemname.BRAKE_UPGRADE)
+CanUltimate: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShuffleMoves, 1) & Has(itemname.ULTIMATE_UPGRADE)
