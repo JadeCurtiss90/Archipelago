@@ -50,7 +50,7 @@ class ProgressiveStaminaUnlocks(Choice):
 
 class ShufflePads(Toggle):
     """Shuffle in jump, boost and recharge pads as both locations and items"""
-    display_name = "Round Shuffle"
+    display_name = "Shuffle Pads"
     internal_name = "shuffle_pads"
 
 class FillerWeights(OptionCounter):
