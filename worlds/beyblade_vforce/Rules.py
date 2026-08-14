@@ -139,3 +139,6 @@ Episode7Round7Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOC
 Episode7RoundBAcc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK)
                           | RandRound & Has(itemname.E7RB_UNLOCK))
 ParChecks: Rule[Any] = True_() & OptionFilter(bey_opt.ParChecks, 0) ##todo
+
+MoveRandoOff: Rule[Any] = True_() & OptionFilter(bey_opt.ShuffleMoves, 0)
+CanBoost: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShuffleMoves, 1) & Has(itemname.BOOST_UPGRADE)
