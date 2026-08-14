@@ -53,30 +53,30 @@ class ShufflePads(Toggle):
     display_name = "Shuffle Pads"
     internal_name = "shuffle_pads"
 
-class FillerWeights(OptionCounter):
-    """
-    Set filler weights for filler items.
-    Each weight represents a number of balls in a lottery roller with that trap on it.
-    So if you had Banana Trap set to 3, and Ice Trap set to 7, and the rest set to 0,
-    you would have a 3/10 for a Banana Trap to be chosen when rolling for trap fillers
-    Must be between 0 and 100
-    """
-    display_name = "Filler Weights"
-    internal_name = "filler_weights"
-    min = 0
-    max = 100
-    valid_keys = ["Bundles", "Coins", "Bills", "Bars", "Gems", "Dust", "Hearts"]
-    default = {
-        "Bundles": 10,
-        "Coins": 15,
-        "Bills": 10,
-        "Bars": 10,
-        "Gems": 5,
-        "Dust": 40,
-        "Hearts": 10
-    }
-    all_on_dict = {item: 100 for item in valid_keys}
-    all_off_dict = {item: 0 for item in valid_keys}
+# class FillerWeights(OptionCounter):
+#     """
+#     Set filler weights for filler items.
+#     Each weight represents a number of balls in a lottery roller with that trap on it.
+#     So if you had Banana Trap set to 3, and Ice Trap set to 7, and the rest set to 0,
+#     you would have a 3/10 for a Banana Trap to be chosen when rolling for trap fillers
+#     Must be between 0 and 100
+#     """
+#     display_name = "Filler Weights"
+#     internal_name = "filler_weights"
+#     min = 0
+#     max = 100
+#     valid_keys = ["Bundles", "Coins", "Bills", "Bars", "Gems", "Dust", "Hearts"]
+#     default = {
+#         "Bundles": 10,
+#         "Coins": 15,
+#         "Bills": 10,
+#         "Bars": 10,
+#         "Gems": 5,
+#         "Dust": 40,
+#         "Hearts": 10
+#     }
+#     all_on_dict = {item: 100 for item in valid_keys}
+#     all_off_dict = {item: 0 for item in valid_keys}
 
 class TrapWeights(OptionCounter):# Affects item pool but not logic. used in create_items step
     """

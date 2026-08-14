@@ -200,3 +200,7 @@ NeedsYellowStaminaBar: Rule[Any] = ProgressiveStaminaOff | (OptionFilter(bey_opt
                                                          Has(itemname.PROGRESSIVE_STAMINA_UPGRADE, 3))
 NeedsWhiteStaminaBar: Rule[Any] = ProgressiveStaminaOff | (OptionFilter(bey_opt.ProgressiveStaminaUnlocks, 1) &
                                                          Has(itemname.PROGRESSIVE_STAMINA_UPGRADE, 4))
+PadShuffleOff: Rule[Any] = True_() & OptionFilter(bey_opt.ShufflePads, 0)
+CanJumpPad: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShufflePads, 1) & Has(itemname.JUMP_PAD_UNLOCK)
+CanBoostPad: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShufflePads, 1) & Has(itemname.BOOST_PAD_UNLOCK)
+CanRechargePad: Rule[Any] = MoveRandoOff | OptionFilter(bey_opt.ShufflePads, 1) & Has(itemname.RECHARGE_PAD_UNLOCK)
