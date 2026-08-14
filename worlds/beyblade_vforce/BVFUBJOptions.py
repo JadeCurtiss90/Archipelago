@@ -30,12 +30,12 @@ class RoundShuffle(Choice):
 
 class ParChecks(Toggle):
     """Add par times for each course as locations"""
-    display_name = "Round Shuffle"
+    display_name = "Par Checks"
     internal_name = "par_checks"
 
 class ShuffleMoves(Toggle):
     """Shuffle in the Beyblade's accelerate, brake and ultimate abilities"""
-    display_name = "Round Shuffle"
+    display_name = "Move Shuffle"
     internal_name = "shuffle_moves"
 
 class ProgressiveStaminaUnlocks(Choice):
