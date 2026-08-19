@@ -3,7 +3,7 @@ from typing import Dict, Any
 
 from Options import Toggle, Range, PerGameCommonOptions, Choice, StartInventoryPool, DeathLinkMixin, OptionSet, \
     DefaultOnToggle, OptionDict, OptionCounter, OptionGroup
-from Items import trap_item_table
+from .Items import trap_item_table
 
 
 #Example Options from Luigi's Mansion
