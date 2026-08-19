@@ -5,6 +5,7 @@ from BaseClasses import Item, ItemClassification as IC
 from .Helpers_Function import GameOptionData
 from .Constants.Names import item_names as ItemName
 from .Constants.world_constants import GAME_NAME
+from ..jakanddaxter import move_item_table
 
 if TYPE_CHECKING:
     from .world import BVFUBJWorld
@@ -207,6 +208,10 @@ progressive_episode_unlock_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.PROGRESSIVE_EPISODE_UNLOCK: BVFUBJItemData(["Progressive Episode Unlocks"], IC.progression, 7)
 }
 
+trap_item_table: {
+
+}
+
 character_unlock_item_table: dict[str,  BVFUBJItemData] = {
     ItemName.BAT: BVFUBJItemData(["Characters"], IC.filler),
     ItemName.BUS_DRIVER: BVFUBJItemData(["Characters"], IC.filler),
@@ -241,7 +246,8 @@ character_unlock_item_table: dict[str,  BVFUBJItemData] = {
 all_items_table: dict[str, BVFUBJItemData] = {**base_item_table, **filler_item_table, **upgrade_item_table,
                                               **pad_item_table, **stamina_upgrade_item_table, **round_unlock_item_table,
                                               **episode_unlock_item_table, **progressive_round_unlock_item_table,
-                                              **progressive_episode_unlock_item_table, **character_unlock_item_table}
+                                              **progressive_episode_unlock_item_table, **trap_item_table,
+                                              **character_unlock_item_table}
 
 def get_items_name_to_id() -> dict[str, int]:
     dict_locs: dict[str, int] = {}
@@ -267,6 +273,29 @@ def create_all_items(world: "BVFUBJWorld"):
 
     # We use this to temporarily keep track of what items we have made to determine filler count later
     local_pool: list[BVFUBJItem] = []
+
+    if BVFUBJWorld.options.random_episodes.option_progressive:
+        local_pool += create_items_from_dict(progressive_episode_unlock_item_table, world, exclude)
+    else:
+        local_pool += create_items_from_dict(episode_unlock_item_table, world, exclude)
+
+    if BVFUBJWorld.options.round_shuffle.option_progressive:
+        local_pool += create_items_from_dict(progressive_round_unlock_item_table, world, exclude)
+    elif BVFUBJWorld.options.round_shuffle.option_random:
+        local_pool += create_items_from_dict(round_unlock_item_table, world, exclude)
+
+    if BVFUBJWorld.options.shuffle_moves.option_true:
+        local_pool += create_items_from_dict(move_item_table, world, exclude)
+
+    if BVFUBJWorld.options.shuffle_pads.option_true:
+        local_pool += create_items_from_dict(pad_item_table, world, exclude)
+
+    if BVFUBJWorld.options.progressive_stamina_unlocks.option_progressive_colors:
+        for _ in range(4):
+            local_pool += world.create_item(ItemName.PROGRESSIVE_STAMINA_UPGRADE)
+    elif BVFUBJWorld.options.progressive_stamina_unlocks.option_progressive_notches:
+        for _ in range(16):
+            local_pool += world.create_item(ItemName.PROGRESSIVE_STAMINA_UPGRADE)
 
     # Add basic items, here and if statements for any optional items
     local_pool += create_items_from_dict(base_item_table, world, exclude)
