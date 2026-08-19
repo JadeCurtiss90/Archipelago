@@ -26,7 +26,7 @@ Episode7Acc: Rule[Any] = (ProgEpisode & Has(itemname.PROGRESSIVE_EPISODE_UNLOCK,
 OpenRounds: Rule[Any] = True_() & OptionFilter(bey_opt.RoundShuffle, 0)
 ProgRound: Rule[Any] = True_() & OptionFilter(bey_opt.RoundShuffle, 1)
 RandRound: Rule[Any] = (True_() & OptionFilter(bey_opt.RoundShuffle, 2))
-Episode1Round1Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 1)
+Episode1Round1Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK)
                           | RandRound & Has(itemname.E1R1_UNLOCK) | OpenRounds)
 Episode1Round2Acc: Rule[Any] = (ProgRound & Has(itemname.PROGRESSIVE_ROUND_UNLOCK, 2)
                          | RandRound & Has(itemname.E1R2_UNLOCK) | OpenRounds)

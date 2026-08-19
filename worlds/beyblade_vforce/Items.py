@@ -200,11 +200,11 @@ episode_unlock_item_table: dict[str,  BVFUBJItemData] = {
 }
 
 progressive_round_unlock_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.PROGRESSIVE_ROUND_UNLOCK: BVFUBJItemData(["Progressive Round Unlocks"], IC.progression)
+    ItemName.PROGRESSIVE_ROUND_UNLOCK: BVFUBJItemData(["Progressive Round Unlocks"], IC.progression, 56)
 }
 
 progressive_episode_unlock_item_table: dict[str,  BVFUBJItemData] = {
-    ItemName.PROGRESSIVE_EPISODE_UNLOCK: BVFUBJItemData(["Progressive Episode Unlocks"], IC.progression)
+    ItemName.PROGRESSIVE_EPISODE_UNLOCK: BVFUBJItemData(["Progressive Episode Unlocks"], IC.progression, 7)
 }
 
 character_unlock_item_table: dict[str,  BVFUBJItemData] = {
