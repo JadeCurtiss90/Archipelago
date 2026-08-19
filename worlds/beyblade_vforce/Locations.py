@@ -1,11 +1,12 @@
 from typing import Optional, NamedTuple, Any, TYPE_CHECKING
 
 from BaseClasses import Location, Region
-from rule_builder.rules import Rule
+from rule_builder.rules import Rule, True_
 
 from . import Helpers_Function
 from .Constants.Names import location_names as LocationName, region_names as RegionName
 from .Constants.world_constants import GAME_NAME
+from .Items import BVFUBJItem
 
 if TYPE_CHECKING:
     from .world import BVFUBJWorld
@@ -280,7 +281,7 @@ LOCATION_NAME_TO_ID: dict[str, int] = get_location_name_to_id()
 
 
 def create_all_locations(world: "BVFUBJWorld"):
-    for loc, data in all_location_table.items():
+    for loc, data in base_location_table.items():
         if data.req_options:
             req_option_list: list = [getattr(world.options, x).value in y for (x,y) in data.req_options.option_list.items()]
             option_value: bool = all(req_option_list) if data.req_options.combine else any(req_option_list)
@@ -293,3 +294,15 @@ def create_all_locations(world: "BVFUBJWorld"):
             world.set_rule(location, data.access)
 
         reg.locations += [location]
+
+    for loc, data in par_location_table.items():
+        if world.options.par_checks:
+            reg = world.get_region(data.region)
+            location = BVFUBJLocation(world.player, loc, list(all_location_table.keys()).index(loc), reg)
+            if data.access is not None:
+                world.set_rule(location, data.access)
+
+            reg.locations += [location]
+        else:
+            da_rule = data.access if data.access else True_()
+            world.get_region(data.region).add_event(loc, "Par Time", da_rule, BVFUBJLocation, BVFUBJItem, True)
