@@ -100,13 +100,13 @@ base_location_table: dict[str, BVFUBJLocationData] = {
     LocationName.PISTOL_CAN: BVFUBJLocationData(RegionName.E2R1, ["Beyblade Collectibles"]),
     LocationName.MAKENDO_CAN: BVFUBJLocationData(RegionName.E6R6, ["Beyblade Collectibles"]),
     LocationName.BAKUSHIN_OH_CAN: BVFUBJLocationData(RegionName.E5R2, ["Beyblade Collectibles"]),
-    LocationName.BUMP_KING_CAN: BVFUBJLocationData(RegionName.E1R1, ["Beyblade Collectibles"]), #Unknown
+    LocationName.BUMP_KING_CAN: BVFUBJLocationData(RegionName.E1R4, ["Beyblade Collectibles"]), #Unknown - enemy
     LocationName.GRIP_ATTACKER_CAN: BVFUBJLocationData(RegionName.E5R5, ["Beyblade Collectibles"]),
     LocationName.BEARING_STINGER_CAN: BVFUBJLocationData(RegionName.E6R3, ["Beyblade Collectibles"]),
     LocationName.BOUND_ATTACKER_CAN: BVFUBJLocationData(RegionName.E3R5, ["Beyblade Collectibles"]),
     LocationName.BOUND_DEFENDER_CAN: BVFUBJLocationData(RegionName.E6R1, ["Beyblade Collectibles"]),
     LocationName.ROLLER_ATTACKER_CAN: BVFUBJLocationData(RegionName.E6R2, ["Beyblade Collectibles"]),
-    LocationName.ROLLER_DEFENSER_CAN: BVFUBJLocationData(RegionName.E1R1, ["Beyblade Collectibles"]), #Unknown
+    LocationName.ROLLER_DEFENSER_CAN: BVFUBJLocationData(RegionName.E6R1, ["Beyblade Collectibles"]), #Unknown - enemy
     LocationName.AUTO_CHANGE_BALANCER_CAN: BVFUBJLocationData(RegionName.E7R5, ["Beyblade Collectibles"]),
     LocationName.WING_ATTACKER_CAN: BVFUBJLocationData(RegionName.E6R5, ["Beyblade Collectibles"]),
     LocationName.WING_DEFENSER_CAN: BVFUBJLocationData(RegionName.E6R1, ["Beyblade Collectibles"]),
@@ -130,7 +130,7 @@ base_location_table: dict[str, BVFUBJLocationData] = {
     LocationName.DRIGER_F_CAN: BVFUBJLocationData(RegionName.MENU, ["Beyblade Collectibles"]),
     LocationName.DRAGOON_FIGHTER_CAN: BVFUBJLocationData(RegionName.MENU, ["Beyblade Collectibles"]),
     LocationName.DRANZER_F_CAN: BVFUBJLocationData(RegionName.MENU, ["Beyblade Collectibles"]),
-    LocationName.GRIFFOLYON_CAN: BVFUBJLocationData(RegionName.E1R1, ["Beyblade Collectibles"]), #Unknown
+    LocationName.GRIFFOLYON_CAN: BVFUBJLocationData(RegionName.E3R1, ["Beyblade Collectibles"]), #Unknown - green top thing
     LocationName.MASTER_DRAGOON_CAN: BVFUBJLocationData(RegionName.E5R7, ["Beyblade Collectibles"]),
     LocationName.MASTER_DRANZER_CAN: BVFUBJLocationData(RegionName.E6R2, ["Beyblade Collectibles"]),
     LocationName.MASTER_DRACIEL_CAN: BVFUBJLocationData(RegionName.E6R4, ["Beyblade Collectibles"]),
@@ -140,34 +140,34 @@ base_location_table: dict[str, BVFUBJLocationData] = {
     LocationName.WOLBORG_2_CAN: BVFUBJLocationData(RegionName.E5R4, ["Beyblade Collectibles"]),
     LocationName.DRAGOON_V_CAN: BVFUBJLocationData(RegionName.E5R3, ["Beyblade Collectibles"]),
     LocationName.METAL_DRANZER_CAN: BVFUBJLocationData(RegionName.E6R4, ["Beyblade Collectibles"]),
-    LocationName.FLASH_LEOPARD_CAN: BVFUBJLocationData(RegionName.E6RB, ["Beyblade Collectibles"]), #Clash
+    LocationName.FLASH_LEOPARD_CAN: BVFUBJLocationData(RegionName.E6RB, ["Beyblade Collectibles"]),
     LocationName.DRIGER_V_CAN: BVFUBJLocationData(RegionName.E5R5, ["Beyblade Collectibles"]),
     LocationName.DRANZER_V_CAN: BVFUBJLocationData(RegionName.E4R7, ["Beyblade Collectibles"]),
-    LocationName.CYBER_DRAGOON_CAN: BVFUBJLocationData(RegionName.E5R7, ["Beyblade Collectibles"]), #Clash
+    LocationName.CYBER_DRAGOON_CAN: BVFUBJLocationData(RegionName.E5R7, ["Beyblade Collectibles"]),
     LocationName.DRACIEL_V_CAN: BVFUBJLocationData(RegionName.E7R1, ["Beyblade Collectibles"]),
     LocationName.HAYATE_HIDDEN_SPIRIT_CAN: BVFUBJLocationData(RegionName.E2R7, ["Beyblade Collectibles"]),
     LocationName.ZINRAI_HIDDEN_SPIRIT_CAN: BVFUBJLocationData(RegionName.E4R4, ["Beyblade Collectibles"]),
-    LocationName.CYBER_DRANZER_CAN: BVFUBJLocationData(RegionName.E2R5, ["Beyblade Collectibles"]), #Clash
-    LocationName.CYBER_DRACIEL_CAN: BVFUBJLocationData(RegionName.E3RB, ["Beyblade Collectibles"]), #Clash
-    LocationName.CYBER_DRIGER_CAN: BVFUBJLocationData(RegionName.E1RB, ["Beyblade Collectibles"]), #Clash
+    LocationName.CYBER_DRANZER_CAN: BVFUBJLocationData(RegionName.E2R5, ["Beyblade Collectibles"]),
+    LocationName.CYBER_DRACIEL_CAN: BVFUBJLocationData(RegionName.E3RB, ["Beyblade Collectibles"]),
+    LocationName.CYBER_DRIGER_CAN: BVFUBJLocationData(RegionName.E1RB, ["Beyblade Collectibles"]),
     LocationName.FOX_ICON_CAN: BVFUBJLocationData(RegionName.E2R7, ["Bit Beast Icons"]),
     LocationName.SPIDER_ICON_CAN: BVFUBJLocationData(RegionName.E2R1, ["Bit Beast Icons"]),
     LocationName.SICKLE_WEASEL_ICON_CAN: BVFUBJLocationData(RegionName.E7R2, ["Bit Beast Icons"]),
     LocationName.TYRANNO_ICON_CAN: BVFUBJLocationData(RegionName.E4R1, ["Bit Beast Icons"]),
     LocationName.CLARKEN_ICON_CAN: BVFUBJLocationData(RegionName.E7R1, ["Bit Beast Icons"]),
     LocationName.DRAGOON_ICON_CAN: BVFUBJLocationData(RegionName.E3RB, ["Bit Beast Icons"]),
-    LocationName.DRANZER_ICON_CAN: BVFUBJLocationData(RegionName.E1R1, ["Bit Beast Icons"]), #Unknown
+    LocationName.DRANZER_ICON_CAN: BVFUBJLocationData(RegionName.E4R6, ["Bit Beast Icons"]), #Unknown - light blue enemy
     LocationName.DRACIEL_ICON_CAN: BVFUBJLocationData(RegionName.E5RB, ["Bit Beast Icons"]),
     LocationName.DRIGER_ICON_CAN: BVFUBJLocationData(RegionName.E1R6, ["Bit Beast Icons"]),
     LocationName.CEREBERUS_ICON_CAN: BVFUBJLocationData(RegionName.E5R1, ["Bit Beast Icons"]),
     LocationName.ORTHRUS_ICON_CAN: BVFUBJLocationData(RegionName.E4R4, ["Bit Beast Icons"]),
     LocationName.GABRIEL_ICON_CAN: BVFUBJLocationData(RegionName.E1R4, ["Bit Beast Icons"]),
     LocationName.ARIEL_ICON_CAN: BVFUBJLocationData(RegionName.E7RB, ["Bit Beast Icons"]),
-    LocationName.CYBER_DRAGOON_ICON_CAN: BVFUBJLocationData(RegionName.E1R1, ["Bit Beast Icons"]), #Clash
-    LocationName.CYBER_DRIGER_ICON_CAN: BVFUBJLocationData(RegionName.E1R1, ["Bit Beast Icons"]), #Clash
-    LocationName.CYBER_DRANZER_ICON_CAN: BVFUBJLocationData(RegionName.E1R1, ["Bit Beast Icons"]), #Clash
-    LocationName.CYBER_DRACIEL_ICON_CAN: BVFUBJLocationData(RegionName.E1R1, ["Bit Beast Icons"]), #Clash
-    LocationName.FLASH_LEOPARD_ICON_CAN: BVFUBJLocationData(RegionName.E1R1, ["Bit Beast Icons"]), #Clash
+    LocationName.CYBER_DRAGOON_ICON_CAN: BVFUBJLocationData(RegionName.E6R4, ["Bit Beast Icons"]),
+    LocationName.CYBER_DRIGER_ICON_CAN: BVFUBJLocationData(RegionName.E2R1, ["Bit Beast Icons"]), # Clash - Pink enemy thing
+    LocationName.CYBER_DRANZER_ICON_CAN: BVFUBJLocationData(RegionName.E6R5, ["Bit Beast Icons"]),
+    LocationName.CYBER_DRACIEL_ICON_CAN: BVFUBJLocationData(RegionName.E6R2, ["Bit Beast Icons"]),
+    LocationName.FLASH_LEOPARD_ICON_CAN: BVFUBJLocationData(RegionName.E7R2, ["Bit Beast Icons"]),
     LocationName.VORTEX_APE_CAN: BVFUBJLocationData(RegionName.E5R5, ["Bit Beast Icons"]),
     LocationName.SHARKRASH_ICON_CAN: BVFUBJLocationData(RegionName.E2RB, ["Bit Beast Icons"]),
     LocationName.VANISHING_MOOT_ICON_CAN: BVFUBJLocationData(RegionName.E6R6, ["Bit Beast Icons"]),
