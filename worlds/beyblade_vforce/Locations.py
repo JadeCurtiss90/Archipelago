@@ -124,12 +124,12 @@ base_location_table: dict[str, BVFUBJLocationData] = {
     LocationName.GALMAN_CAN: BVFUBJLocationData(RegionName.E7R2, ["Beyblade Collectibles"]),
     LocationName.WOLBORG_CAN: BVFUBJLocationData(RegionName.E6R6, ["Beyblade Collectibles"]),
     LocationName.SEABORG_CAN: BVFUBJLocationData(RegionName.E3R7, ["Beyblade Collectibles"]),
-    LocationName.DRACIEL_S_CAN: BVFUBJLocationData(RegionName.E1R1, ["Beyblade Collectibles"]), #Unknown
+    LocationName.DRACIEL_S_CAN: BVFUBJLocationData(RegionName.MENU, ["Beyblade Collectibles"]),
     LocationName.TRYGLE_CAN: BVFUBJLocationData(RegionName.E4R1, ["Beyblade Collectibles"]),
     LocationName.TRYPIO_CAN: BVFUBJLocationData(RegionName.E3R2, ["Beyblade Collectibles"]),
-    LocationName.DRIGER_F_CAN: BVFUBJLocationData(RegionName.E1R1, ["Beyblade Collectibles"]), #Unknown
-    LocationName.DRAGOON_FIGHTER_CAN: BVFUBJLocationData(RegionName.E1R1, ["Beyblade Collectibles"]), #Unknown
-    LocationName.DRANZER_F_CAN: BVFUBJLocationData(RegionName.E1R1, ["Beyblade Collectibles"]), #Unknown
+    LocationName.DRIGER_F_CAN: BVFUBJLocationData(RegionName.MENU, ["Beyblade Collectibles"]),
+    LocationName.DRAGOON_FIGHTER_CAN: BVFUBJLocationData(RegionName.MENU, ["Beyblade Collectibles"]),
+    LocationName.DRANZER_F_CAN: BVFUBJLocationData(RegionName.MENU, ["Beyblade Collectibles"]),
     LocationName.GRIFFOLYON_CAN: BVFUBJLocationData(RegionName.E1R1, ["Beyblade Collectibles"]), #Unknown
     LocationName.MASTER_DRAGOON_CAN: BVFUBJLocationData(RegionName.E5R7, ["Beyblade Collectibles"]),
     LocationName.MASTER_DRANZER_CAN: BVFUBJLocationData(RegionName.E6R2, ["Beyblade Collectibles"]),
