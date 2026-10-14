@@ -5,7 +5,7 @@ import worlds._polyemu.context as polyctx
 from .Constants import world_constants as WC
 
 class BVFUBJClient(polyemu.PolyEmuClient):
-    game = WC.GAME_NAME                       # must match your world's game name
+    game = WC.GAME_NAME                    # must match your world's game name
     platform = polyemu.PLATFORMS.GBA       # one platform, or a tuple of platforms
     patch_suffix = ".apbvfubj"             # patch extension(s) this client opens, or None
 
@@ -31,7 +31,7 @@ class BVFUBJClient(polyemu.PolyEmuClient):
 
 
     # Read the 14 collectible bytes
-    def get_flag(flag_num: int)
+    def get_flag(flag_num: int):
         byte_index = flag_num // 8
         flag_idx = index % 8
         return bool(collectible_bytes[byte_idx] & (1 << flag_idx))
